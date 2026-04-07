@@ -3,14 +3,14 @@ name: "Revision de MarkDown"
 on:
   push:
     # Ejecuta cada vez que se haga push
-    branches: [ "main", "feature/**", "docs/**" ]
+    branches: [ "main", "develop/feature**", "develop/hotfix**" ]
   pull_request:
     # Se ejecuta en cada pull request hacia la rama principal
     branches: [ "main" ]
 
 jobs:
   markdownlint:
-    name: "Check Documentation Quality"
+    name: "Revisar la calidad de la Documentacion"
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout Code"
